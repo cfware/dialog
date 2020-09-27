@@ -25,6 +25,6 @@
 		"@cfware/shadow-element": "^0.15.0"
 	},
 	"devDependencies": {
-		"@cfware/lint": "^1.4.3"
+		"@cfware/lint": "^2.0.2"
 	}
 }
