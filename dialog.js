@@ -130,7 +130,8 @@ export function runDialog(title, body, buttons, onkeyup = escapeEnterHandler) {
 		}
 
 		setTimeout(() => {
-			node.querySelector('[autofocus]').focus();
+			const autofocus = node.querySelector('[autofocus]') ?? node.querySelector('[name]');
+			autofocus?.focus();
 			window.addEventListener('keydown', keydownHandler);
 			window.addEventListener('keyup', keyupHandler);
 		});
