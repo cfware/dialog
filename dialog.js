@@ -81,18 +81,22 @@ const eventKeys = {
 
 export const escapeEnterHandler = event => eventKeys[event.key];
 
+let abortSignalers = [];
+
+export function abortDialogs() {
+	for (const signaler of abortSignalers) {
+		signaler();
+	}
+}
+
 export function runDialog(title, body, buttons, onkeyup = escapeEnterHandler) {
 	const activeElement = findActiveElement();
 
 	return new Promise(resolve => {
 		const node = createDialogNode(title, body, buttons);
 		const elements = [...document.body.children];
-
-		for (const element of elements) {
-			element.tabIndex = -1;
-		}
-
 		const cleanup = result => {
+			abortSignalers = abortSignalers.filter(fn => fn !== cleanup);
 			for (const element of elements) {
 				element.removeAttribute('tabindex');
 			}
@@ -103,6 +107,11 @@ export function runDialog(title, body, buttons, onkeyup = escapeEnterHandler) {
 			setTimeout(() => activeElement?.focus());
 			resolve(result);
 		};
+
+		abortSignalers.push(cleanup);
+		for (const element of elements) {
+			element.tabIndex = -1;
+		}
 
 		let keydown;
 		const keydownHandler = event => {
