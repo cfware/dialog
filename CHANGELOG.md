@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/cfware/dialog/compare/v0.1.1...v0.1.2) (2020-11-06)
+
+
+### Bug Fixes
+
+* Reduce size ([0d4119c](https://github.com/cfware/dialog/commit/0d4119ca5553084652908b03162cdc020b072ceb))
+
 ### [0.1.1](https://github.com/cfware/dialog/compare/v0.1.0...v0.1.1) (2020-10-30)
 
 
