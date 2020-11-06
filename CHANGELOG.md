@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/cfware/dialog/compare/v0.1.2...v0.1.3) (2020-11-06)
+
+
+### Bug Fixes
+
+* Add missing semicolons ([d05e9ef](https://github.com/cfware/dialog/commit/d05e9ef793f379fe7d73ad40a7af47c768177360))
+
 ### [0.1.2](https://github.com/cfware/dialog/compare/v0.1.1...v0.1.2) (2020-11-06)
 
 
