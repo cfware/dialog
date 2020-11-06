@@ -22,9 +22,9 @@
 	},
 	"homepage": "https://github.com/cfware/dialog#readme",
 	"dependencies": {
-		"@cfware/shadow-element": "^0.15.0"
+		"@cfware/shadow-element": "^0.16.0"
 	},
 	"devDependencies": {
-		"@cfware/lint": "^2.0.2"
+		"@cfware/lint": "^2.0.4"
 	}
 }
