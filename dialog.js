@@ -65,7 +65,7 @@ const createDialogNode = (title, body, buttons) => htmlNode`
 	</c-d>
 `;
 
-function findActiveElement() {
+const findActiveElement = () => {
 	let {activeElement} = document;
 	while (activeElement?.shadowRoot?.activeElement) {
 		activeElement = activeElement.shadowRoot.activeElement;
@@ -83,13 +83,13 @@ export const escapeEnterHandler = event => eventKeys[event.key];
 
 let abortSignalers = [];
 
-export function abortDialogs() {
+export const abortDialogs = () => {
 	for (const signaler of abortSignalers) {
 		signaler();
 	}
 }
 
-export function runDialog(title, body, buttons, onkeyup = escapeEnterHandler) {
+export const runDialog = (title, body, buttons, onkeyup = escapeEnterHandler) => {
 	const activeElement = findActiveElement();
 
 	return new Promise(resolve => {
@@ -147,7 +147,7 @@ export function runDialog(title, body, buttons, onkeyup = escapeEnterHandler) {
 	});
 }
 
-export function dialogAlert(title, body) {
+export const dialogAlert = (title, body) => {
 	return runDialog(
 		title,
 		body,
@@ -155,7 +155,7 @@ export function dialogAlert(title, body) {
 	);
 }
 
-export function dialogConfirm(title, body, yesLabel = 'OK', noLabel = 'Cancel') {
+export const dialogConfirm = (title, body, yesLabel = 'OK', noLabel = 'Cancel') => {
 	return runDialog(
 		title,
 		body,
