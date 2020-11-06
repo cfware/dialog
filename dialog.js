@@ -72,7 +72,7 @@ const findActiveElement = () => {
 	}
 
 	return activeElement;
-}
+};
 
 const eventKeys = {
 	Enter: true,
@@ -87,7 +87,7 @@ export const abortDialogs = () => {
 	for (const signaler of abortSignalers) {
 		signaler();
 	}
-}
+};
 
 export const runDialog = (title, body, buttons, onkeyup = escapeEnterHandler) => {
 	const activeElement = findActiveElement();
@@ -145,7 +145,7 @@ export const runDialog = (title, body, buttons, onkeyup = escapeEnterHandler) =>
 			window.addEventListener('keyup', keyupHandler);
 		});
 	});
-}
+};
 
 export const dialogAlert = (title, body) => {
 	return runDialog(
@@ -153,7 +153,7 @@ export const dialogAlert = (title, body) => {
 		body,
 		html`<button autofocus key=Enter>OK</button>`
 	);
-}
+};
 
 export const dialogConfirm = (title, body, yesLabel = 'OK', noLabel = 'Cancel') => {
 	return runDialog(
@@ -164,4 +164,4 @@ export const dialogConfirm = (title, body, yesLabel = 'OK', noLabel = 'Cancel') 
 			<button autofocus key=Escape>${noLabel}</button>
 		`
 	);
-}
+};
