@@ -1,30 +1,30 @@
 {
-	"name": "@cfware/dialog",
-	"version": "0.2.0",
-	"description": "Dialog overlays",
-	"type": "module",
-	"main": "dialog.js",
-	"exports": "./dialog.js",
-	"scripts": {
-		"test": "cfware-lint ."
-	},
-	"engines": {
-		"node": ">=14.0.0"
-	},
-	"author": "Corey Farrell",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/cfware/dialog.git"
-	},
-	"bugs": {
-		"url": "https://github.com/cfware/dialog/issues"
-	},
-	"homepage": "https://github.com/cfware/dialog#readme",
-	"dependencies": {
-		"@cfware/shadow-element": "^0.16.0"
-	},
-	"devDependencies": {
-		"@cfware/lint": "^2.0.4"
-	}
+    "name": "@cfware/dialog",
+    "version": "0.2.0",
+    "description": "Dialog overlays",
+    "type": "module",
+    "main": "dialog.js",
+    "exports": "./dialog.js",
+    "scripts": {
+        "test": "cfware-lint ."
+    },
+    "engines": {
+        "node": ">=18"
+    },
+    "author": "Corey Farrell",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cfware/dialog.git"
+    },
+    "bugs": {
+        "url": "https://github.com/cfware/dialog/issues"
+    },
+    "homepage": "https://github.com/cfware/dialog#readme",
+    "dependencies": {
+        "@cfware/shadow-element": "^1"
+    },
+    "devDependencies": {
+        "@cfware/lint": "^4"
+    }
 }
